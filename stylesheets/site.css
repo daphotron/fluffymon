@@ -453,14 +453,14 @@ ul, ol, li {
   border-right: 1px; }
 
 .marketing {
-  background: url(/images/bg-animals.jpg) center top repeat;
+  background: url(images/bg-animals.jpg) center top repeat;
   padding: 2rem 0 4rem; }
 
 .bg-light {
   background-color: #fff; }
 
 .logo-large {
-  background: url(/images/logo-large.png) center top no-repeat;
+  background: url(images/logo-large.png) center top no-repeat;
   height: 130px;
   margin-left: auto;
   margin-right: auto;
@@ -469,7 +469,7 @@ ul, ol, li {
   width: 135px; }
 
 .btn-twitter {
-  background: url(/images/btn-twitter.png) center top no-repeat;
+  background: url(images/btn-twitter.png) center top no-repeat;
   display: block;
   height: 41px;
   margin: 1.5rem auto 0;
@@ -486,7 +486,7 @@ ul, ol, li {
   z-index: 9999; }
 
 .logo-small {
-  background: url(/images/logo-small.png) center top no-repeat;
+  background: url(images/logo-small.png) center top no-repeat;
   height: 81px;
   left: 15px;
   overflow: hidden;

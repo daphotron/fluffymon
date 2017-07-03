@@ -1,0 +1,134 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Use the title from a page's frontmatter if it has one -->
+    <title>Fluffymon - Add Pet</title>
+    <link href="/stylesheets/site.css" rel="stylesheet" />
+    <script src="/javascripts/site.js"></script>
+  </head>
+  <body>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.1.0/dist/leaflet.css" integrity="sha512-wcw6ts8Anuw10Mzh9Ytw4pylW8+NAD4ch3lqm9lzAsTxg0GFeJgoAtxuCLREZSC5lUXdVyo/7yfsqFjQ4S+aKw==" crossorigin=""/>
+<script src="https://unpkg.com/leaflet@1.1.0/dist/leaflet.js" integrity="sha512-mNqn2Wg7tSToJhvHcqfzLMU6J4mkOImSPTxVZAdo+lcPlk+GhZmYgACEe0x35K7YzW1zJ7XyJV/TT1MrdXvMcA==" crossorigin=""></script>
+
+<div class="header relative">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 pvd">
+        <a class="logo-small" href="/map.html">
+          Fluffymon
+        </a>
+        <div class="right align-right">
+          <a class="user-profile right" href="my-info.html">
+            <i class="fa fa-user-circle-o"></i>
+          </a>
+          <div class="right mld relative">
+            <a class="avatar" href="my-matches.html">
+              <img src="/images/dog.jpg">
+            </a>
+            <span class="alert">5</span>
+          </div>
+          <a class="btn-primary right" href="add-pet.html">
+            <i class="fa fa-plus"></i>
+            Add My Pet
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="relative">
+  <div class="container pvl">
+    <div class="row">
+      <div class="col-md-5">
+        <h1 class="h1">Add My Pet</h1>
+        <form action="">
+          <div class="pbd">
+            <label for="name">Name</label>
+            <input type="text" name="name" value="Anita Alvarez">
+          </div>
+          <div class="pbd">
+            <label for="species">Species</label>
+            <input type="text" name="species" value="Dog">
+          </div>
+          <div class="pbd">
+            <label for="breed">Breed</label>
+            <input type="text" name="breed" value="Golden Retriever">
+          </div>
+          <div class="pbd">
+            <label for="color">Color</label>
+            <input type="text" name="color" value="Brown">
+          </div>
+          <div class="pbd">
+            <label for="date">Date Last Seen</label>
+            <input type="text" name="date" value="04/13/2017">
+          </div>
+          <div class="pbd">
+            <label for="reward">Reward Amount</label>
+            <input type="text" name="reward" value="$500">
+          </div>
+          <div class="mtd">
+            <a class="btn-secondary right" href="/map.html">Report Missing</a>
+            <a class="btn-tertiary right mrd" href="/map.html">Cancel</a>
+          </div>
+        </form>
+
+      </div>
+      <div class="col-md-7">
+        <div id="mapid" style="width: 630px; height: 660px;"></div>
+<script>
+  var mymap = L.map('mapid').setView([40.7128,-74.0059], 15);
+  L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
+    maxZoom: 18,
+    attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, ' +
+      '<a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
+      'Imagery © <a href="http://mapbox.com">Mapbox</a>',
+    id: 'mapbox.streets'
+  }).addTo(mymap);
+
+  var popup = L.popup();
+
+  function onMapClick(e) {
+    popup
+      .setLatLng(e.latlng)
+      .setContent("You clicked the map at " + e.latlng.toString())
+      .openOn(mymap);
+  }
+
+  mymap.on('click', onMapClick);
+</script>
+      </div>
+    </div>
+  </div>
+
+<div class="bg-modal">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 offset-md-3">
+        <div class="bg-light pad mtxxl align-center">
+          <div class="phm pvl box">
+            <div class="avatar-large center mbs">
+              <img src="/images/dog.jpg" alt="">
+            </div>
+            <div class="h1">
+              Monet <br> has been reported and people are out looking
+            </div>
+            <div class="mtm subtext">
+              We'll email you when we hear something, hang in there
+            </div>
+            <a class="btn-tertiary mtd" href="/map.html">
+              Close
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+
+</html>

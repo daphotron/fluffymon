@@ -84,6 +84,10 @@ ul, ol, li {
 .relative {
   position: relative; }
 
+.clearfix {
+  clear: both;
+  overflow: hidden; }
+
 .paxxl {
   padding: 6rem; }
 
@@ -627,3 +631,23 @@ ul, ol, li {
 
 .text-light {
   color: #aaa; }
+
+#mapid .leaflet-popup-content-wrapper, #mapid .leaflet-popup-tip {
+  -webkit-box-shadow: 0 0 1px #FF5C5B;
+          box-shadow: 0 0 1px #FF5C5B; }
+#mapid .leaflet-popup-content-wrapper {
+  border-radius: 4px;
+  overflow: hidden;
+  padding: 0; }
+#mapid .leaflet-popup-content {
+  font-size: 10px;
+  font-weight: bold;
+  margin: 0;
+  text-align: center; }
+#mapid .leaflet-popup-content a {
+  color: #FF5C5B;
+  font-size: 12px;
+  font-weight: bold;
+  margin-bottom: 0.25rem; }
+#mapid .leaflet-popup-tip-container {
+  margin-top: -1px; }

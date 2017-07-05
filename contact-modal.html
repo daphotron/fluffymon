@@ -6,7 +6,7 @@
     <meta name="viewport"
           content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Use the title from a page's frontmatter if it has one -->
-    <title>Fluffymon - Map</title>
+    <title>Fluffymon - Add Pet</title>
     <link href="stylesheets/site.css" rel="stylesheet" />
     <script src="javascripts/site.js"></script>
   </head>
@@ -54,11 +54,13 @@
     id: 'mapbox.streets'
   }).addTo(mymap);
   L.marker([40.7128, -74.0059]).addTo(mymap)
-    .bindPopup("<img width='96' src='images/dog.jpg'><div class='pas'><h4><a href='contact-modal.html'>Holly</a></h4>22 days ago</div>").openPopup();
+    .bindPopup("<a href='contact-modal.html'><h4>Holly</h4></a><br />22 days ago").openPopup();
   L.marker([40.7158, -74.0059]).addTo(mymap)
-    .bindPopup("<img width='96' src='images/dog.jpg'><div class='pas'><h4><a href='contact-modal.html'>Maximus</a></h4>Today</div>").openPopup();
+    .bindPopup("<a href='contact-modal.html'><h4>Maximus</h4></a><br />Today").openPopup();
   L.marker([40.7128, -74.0029]).addTo(mymap)
-    .bindPopup("<img width='96' src='images/dog.jpg'><div class='pas'><h4><a href='contact-modal.html'>Alvina</a></h4>11 days ago</div>").openPopup();
+    .bindPopup("<a href='contact-modal.html'><h4>Alvina</h4></a><br />11 days ago").openPopup();
+  var popup = L.popup();
+
   var popup = L.popup();
 
   function onMapClick(e) {
@@ -77,6 +79,34 @@
     <div class="row">
       <div class="col-md-12">
           These pets have been reported missing in your location
+      </div>
+    </div>
+  </div>
+</div>
+<div class="bg-modal">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 offset-md-3">
+        <div class="bg-light pad mtxxl align-center">
+          <div class="phm pvl box">
+            <div class="h1">
+              Holly
+            </div>
+            <div class="center mbs">
+              <img src="images/dog.jpg" alt="">
+            </div>
+            <div class="mtm text-highlight">
+              Missing 11 days
+            </div>
+            <div class="mtm hxl">
+              $500
+            </div>
+          <div class="mtd clearfix">
+            <a class="btn-tertiary mrd" href="map.html">Close</a>
+            <a class="btn-secondary" href="contact.html">Contact Owner</a>
+          </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
